@@ -1,6 +1,5 @@
-package Gers_Garage.models;
+package com.gersgarage.models;
 
-import Gers_Garage.enumerates.Gender;
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
@@ -12,7 +11,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 @Entity
-@Table(name = "clients")
+@Table(name = "client")
 public class Client implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -57,6 +56,7 @@ public class Client implements Serializable {
 
     @OneToMany(mappedBy = "client")
     private List<Booking> bookingList;
+
 
     @Transient
     private String confirmPassword;

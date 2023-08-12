@@ -1,6 +1,6 @@
-package Gers_Garage.models;
+package com.gersgarage.models;
 
-import Gers_Garage.enumerates.*;
+import com.gersgarage.enumerates.*;
 import jakarta.persistence.*;
 
 import java.util.List;

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CarServ - Car Repair HTML Template</title>
+    <title>AutoServ - Ger's Garage</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -80,38 +80,113 @@
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
+
+    <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!--<div class="shopping-cart">
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="img/cart-1.jpg" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="img/cart-2.jpg" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="img/cart-3.jpg" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <h3 class="total"> total : <span>56.97</span> </h3>
+        <a href="#" class="btn">checkout cart</a>
+    </div>-->
+
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="index.html" class="nav-item nav-link active">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="shop.html" class="nav-item nav-link">Shop</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                 <div class="dropdown-menu fade-up m-0">
-                    <a href="booking.html" class="dropdown-item active">Shop</a>
-                    <a href="team.html" class="dropdown-item">Technicians</a>
-                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    <!--<a href="404.html" class="dropdown-item">404 Page</a>-->
+                    <a href="service.html" class="dropdown-item">Repair/Maintenance</a>
+                    <a href="wash.html" class="dropdown-item">Detailing</a>
+
                 </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="userpage.html" class="dropdown-item">My area</a>
+                    <a href="contact.html" class="dropdown-item">Contact</a>
+                    <a href="staff.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <!-- <a href="404.html" class="dropdown-item">404 Page</a>-->
+                </div>
+            </div>
         </div>
-        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="login.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+        <!--
+                    <a href="#" id="loginButton" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+        -->
+
+        <script>
+                document.getElementById("loginButton").addEventListener("click", function() {
+                    $.ajax({
+                        url: "http://localhost:8080/",
+                        method: "GET",
+                        dataType: "json",
+                        success: function(data) {
+                            // Processar os dados recebidos da chamada REST
+                            console.log("Dados recebidos:", data);
+                            // Faça algo com os dados, se necessário
+                        },
+                        error: function(error) {
+                            console.error("Erro na chamada REST:", error);
+                        }
+                    });
+                });
+            </script>
     </div>
 </nav>
 <!-- Navbar End -->
 
 
 <!-- Page Header Start -->
-<div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-bg-1.jpg);">
+<div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-bg-2.jpg);">
     <div class="container-fluid page-header-inner py-5">
         <div class="container text-center">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Shop Zone</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center text-uppercase">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <!--<li class="breadcrumb-item"><a href="#">Pages</a></li>-->
-                    <li class="breadcrumb-item text-white active" aria-current="page">Login</li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Our Shop</li>
                 </ol>
             </nav>
         </div>
@@ -120,126 +195,202 @@
 <!-- Page Header End -->
 
 
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex py-5 px-4">
-                    <i class="fa fa-certificate fa-3x text-primary flex-shrink-0"></i>
-                    <div class="ps-4">
-                        <h5 class="mb-3">Quality Serving</h5>
-                        <!--<p>So let's go enjoy everything that we got for you and your vehicle!</p>
-                        <a class="text-secondary border-bottom" href="">Log-in here</a>-->
-                    </div>
-                </div>
+<!-- Shop Start -->
+<section class="category">
+
+    <h1 class="title"> our <span>category</span> <a href="#">view all >></a> </h1>
+
+    <div class="box-container">
+
+        <a href="#" class="box">
+            <img src="img/cat-1.png" alt="">
+            <h3>Car parts</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="img/cat-2.png" alt="">
+            <h3>Motorbikes parts</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="img/cat-3.png" alt="">
+            <h3>Truck/bus parts</h3>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+    <h1 class="title"> our <span>products</span> <a href="#">view all >></a> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="d-flex bg-light py-5 px-4">
-                    <i class="fa fa-users-cog fa-3x text-primary flex-shrink-0"></i>
-                    <div class="ps-4">
-                        <h5 class="mb-3">Already registered?</h5>
-                        <p>So let's go enjoy everything that we got for you and your vehicle!</p>
-                        <a class="text-secondary border-bottom" href="">Log-in here</a>
-                    </div>
-                </div>
+            <div class="image">
+                <img src="img/product-1.jpg" alt="">
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="d-flex py-5 px-4">
-                    <i class="fa fa-tools fa-3x text-primary flex-shrink-0"></i>
-                    <div class="ps-4">
-                        <h5 class="mb-3">Modern Equipment</h5>
-                        <!--<p>Diam dolor diam ipsum sit amet diam et eos erat ipsum</p>
-                        <a class="text-secondary border-bottom" href="">Read More</a>-->
-                    </div>
+            <div class="content">
+                <h3>Wheel</h3>
+                <div class="price">$100.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- Service End -->
 
-
-<!-- Booking Start -->
-<div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-lg-6 py-5">
-                <div class="py-5">
-                    <h1 class="text-white mb-4">Certified and Award Winning Service Provider</h1>
-                    <p class="text-white mb-0">Not one of us yet? Calm down and fill all the fields with all your personal information, we will be waiting for you!</p>
-                </div>
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
             </div>
-            <div class="col-lg-6">
-                <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
-                    <h1 class="text-white mb-4">Personal information</h1>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="First name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Last name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="E-mail" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Phone number" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select border-0" style="height: 55px;">
-                                    <option selected>Your gender</option>
-                                    <option value="1">Male</option>
-                                    <option value="2">Female</option>
-                                    <option value="3">Other</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text"
-                                           class="form-control border-0 datetimepicker-input"
-                                           placeholder="Date of birth" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Password" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder="Confirm password" style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-secondary w-100 py-3" type="submit">Register Now</button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="image">
+                <img src="img/product-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Synthetic oil</h3>
+                <div class="price">$34.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- Booking End -->
 
-
-<!-- Call To Action Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-8 col-md-6">
-                <h6 class="text-primary text-uppercase">// Call To Action //</h6>
-                <h1 class="mb-4">Have any pre-booking question?</h1>
-                <p class="mb-0">If you still have any question about our service dont't be shy and give us a call! We'll more than glad in help you and your vehicle.</p>
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-primary d-flex flex-column justify-content-center text-center h-100 p-4">
-                    <h3 class="text-white mb-4"><i class="fa fa-phone-alt me-3"></i>+353 83 113 6867</h3>
-                    <a href="contact.html" class="btn btn-secondary py-3 px-5">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
+            <div class="image">
+                <img src="img/product-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>car battery</h3>
+                <div class="price">$79.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
                 </div>
             </div>
         </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="image">
+                <img src="img/product-4.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Headlights</h3>
+                <div class="price">$179.00</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="image">
+                <img src="img/product-5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Spark plug</h3>
+                <div class="price">$37.50</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="image">
+                <img src="img/product-6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Rear light</h3>
+                <div class="price">$118.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="image">
+                <img src="img/product-7.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Brake pad</h3>
+                <div class="price">$52.30</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+            <div class="image">
+                <img src="img/product-8.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Air filter</h3>
+                <div class="price">$17.90</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
-<!-- Call To Action End -->
+
+</section>
+<!-- Shop End -->
 
 
 <!-- Footer Start -->
@@ -250,7 +401,7 @@
                 <h4 class="text-light mb-4">Address</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>57 Fairview Strand - D03W7P4, Dublin, Ireland</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+353 83 113 6867</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>gers_garage@egmail.com</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>gers_garage@gmail.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -267,11 +418,11 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Services</h4>
-                <a class="btn btn-link" href="">Annual Service</a>
-                <a class="btn btn-link" href="">Major Service</a>
-                <a class="btn btn-link" href="">Repair</a>
-                <a class="btn btn-link" href="">Major Repair</a>
-                <a class="btn btn-link" href="">Cleaning</a>
+                <a class="btn btn-link" href="service.html">Annual Service</a>
+                <a class="btn btn-link" href="service.html">Major Service</a>
+                <a class="btn btn-link" href="service.html">Repair</a>
+                <a class="btn btn-link" href="service.html">Major Repair</a>
+                <a class="btn btn-link" href="wash.html">Detailing</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Newsletter</h4>
@@ -312,6 +463,10 @@
 
 
 <!-- JavaScript Libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="lib/wow/wow.min.js"></script>

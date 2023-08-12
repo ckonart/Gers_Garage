@@ -1,7 +1,7 @@
-package Gers_Garage.service;
+package com.gersgarage.service;
 
-import Gers_Garage.models.Product;
-import Gers_Garage.repositories.ProductRepository;
+import com.gersgarage.models.Product;
+import com.gersgarage.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

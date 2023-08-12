@@ -1,4 +1,4 @@
-package Gers_Garage.repositories;
+package com.gersgarage.repositories;
 
 public interface BookingRepository {
 }

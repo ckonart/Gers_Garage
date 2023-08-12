@@ -1,4 +1,4 @@
-package Gers_Garage.enumerates;
+package com.gersgarage.enumerates;
 
 public enum CarMaker {
 

@@ -1,13 +1,13 @@
-package Gers_Garage.controllers;
+package com.gersgarage.controllers;
 
-import Gers_Garage.models.Client;
-import Gers_Garage.service.ClientService;
+import com.gersgarage.models.Client;
+import com.gersgarage.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
- /*
+
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
@@ -29,7 +29,7 @@ public class ClientController {
         return clientService.findClientByEmail(email);
     }
 
-    @GetMapping("/id/{clientId")
+    @GetMapping("/id/{clientId}")
     public List<Client> getClientById(@PathVariable Integer clientId) {
         return clientService.findClientById(clientId);
     }
@@ -74,4 +74,4 @@ public class ClientController {
     }
 
 
-}*/
+}

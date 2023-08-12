@@ -1,7 +1,7 @@
-package Gers_Garage.repositories;
+package com.gersgarage.repositories;
 
-import Gers_Garage.models.Client;
-import Gers_Garage.models.Vehicle;
+import com.gersgarage.models.Client;
+import com.gersgarage.models.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -18,7 +18,7 @@ public interface VehicleRepository extends JpaRepository<Vehicle, Integer> {
     List<Vehicle> findAllVehicles();
 
     @Query("SELECT v FROM Vehicle v WHERE v.id_vehicle = :vehicleId")
-    Optional<Vehicle> findVehicleById(@Param("vehicleId") Integer vehicleId);
+    List<Vehicle> findVehicleById(@Param("vehicleId") Integer vehicleId);
 
     @Query("SELECT v FROM Vehicle v WHERE v.model = :model")
     List<Vehicle> findVehicleByModel(@Param("model") String model);

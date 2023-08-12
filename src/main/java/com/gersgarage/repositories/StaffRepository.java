@@ -1,7 +1,7 @@
-package Gers_Garage.repositories;
+package com.gersgarage.repositories;
 
-import Gers_Garage.models.Client;
-import Gers_Garage.models.Staff;
+import com.gersgarage.models.Client;
+import com.gersgarage.models.Staff;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

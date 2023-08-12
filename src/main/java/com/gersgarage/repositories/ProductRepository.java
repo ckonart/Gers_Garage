@@ -1,6 +1,6 @@
-package Gers_Garage.repositories;
+package com.gersgarage.repositories;
 
-import Gers_Garage.models.Product;
+import com.gersgarage.models.Product;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

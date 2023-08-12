@@ -1,7 +1,7 @@
-package Gers_Garage.service;
+package com.gersgarage.service;
 
-import Gers_Garage.models.Client;
-import Gers_Garage.repositories.ClientRepository;
+import com.gersgarage.models.Client;
+import com.gersgarage.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,14 +37,14 @@ public class ClientService {
     public List<Client> findClientsByLastName(String lastName) {
         return clientRepository.findClientsByLastName(lastName); }
 
-//    public void deleteClientById(Integer clientId) {
-//        clientRepository.deleteClientById(clientId);
-//    }
+    public void deleteClientById(Integer clientId) {
+        clientRepository.deleteClientById(clientId);
+    }
 
-//    public void deleteClientByEmail(String email) {
-//        clientRepository.deleteClientByEmail(email); }
+    public void deleteClientByEmail(String email) {
+        clientRepository.deleteClientByEmail(email); }
 
-    /*@Transactional
+    @Transactional
     public boolean updateClientByEmail(String email, Client updatedClient) {
         Client existingClient = clientRepository.findClientByEmail(email);
 
@@ -63,6 +63,6 @@ public class ClientService {
         } else {
             return false;
         }
-    }*/
+    }
 
 }

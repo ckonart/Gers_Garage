@@ -1,4 +1,4 @@
-package Gers_Garage.utils;
+package com.gersgarage.utils;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

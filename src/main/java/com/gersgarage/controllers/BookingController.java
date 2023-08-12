@@ -1,59 +1,41 @@
 package com.gersgarage.controllers;
 
 
-import com.gersgarage.models.Product;
-import com.gersgarage.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gersgarage.dto.BookingDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
-@RequestMapping("/products")
-public class ProductController {
+@RequestMapping("/")
+public class BookingController {
 
-    private final ProductService productService;
+/*
+    private final BookingService bookingService;
+*/
 
-    @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
+    /*@Autowired
+    public BookingController(BookingService bookingService) {
+        this.bookingService = bookingService;
+    }*/
 
-    @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.findAllProducts();
-    }
-
-    @GetMapping("product-name/{productName}")
-    public List<Product> getProductByName(@PathVariable String productName) {
-        return productService.findProductByName(productName);
-    }
-
-    @GetMapping("product-name/{productId}")
-    public List<Product> getProductById(@PathVariable Integer productId) {
-        return productService.findProductById(productId); }
-
-    @DeleteMapping("/{productId}")
-    public ResponseEntity<String> deleteProduct(@PathVariable Integer productId) {
-        productService.deleteProductById(productId);
-        return ResponseEntity.ok("Product deleted successfully");
-    }
-
-    @DeleteMapping("/{productName}")
-    public ResponseEntity<String> deleteProduct(@PathVariable String productName) {
-        productService.deleteProductByName(productName);
-        return ResponseEntity.ok("Product deleted successfully");
-    }
-
-    @PutMapping("/{itemId}")
-    public ResponseEntity<String> updateProduct(@PathVariable Integer itemId, @RequestBody Product updatedProduct) {
-        boolean updated = productService.updateProduct(itemId, updatedProduct);
+    @PostMapping("/booking")
+    public ResponseEntity<String> updateBookingType(@RequestBody BookingDTO bookingDTO) {
+        /*boolean updated = bookingService.updateBookingType(bookingDTO.getType());
 
         if (updated) {
-            return ResponseEntity.ok("Product updated successfully");
+            return ResponseEntity.ok("Booking type updated successfully.");
         } else {
-            return ResponseEntity.notFound().build();
-        }
+            return ResponseEntity.badRequest().body("Booking not found or update failed.");
+        }*/
+
+        return ResponseEntity.ok("Booking type updated successfully.");
     }
 }
+
+
+
+
+
+
+
+

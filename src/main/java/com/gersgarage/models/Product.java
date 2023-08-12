@@ -1,11 +1,12 @@
-package Gers_Garage.models;
+package com.gersgarage.models;
 
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
-@Table(name = "products")
+@Table(name = "product")
 public class Product {
 
     @Id
@@ -13,18 +14,21 @@ public class Product {
     private Integer id_item;
     private String item_name;
     private BigDecimal item_cost;
+    private Integer item_qtd;
 
     @ManyToOne
     @JoinColumn(name = "id_booking_fk", nullable = true)
     private Booking booking;
 
+
     public Product() {
     }
 
-    public Product(Integer id_item, String item_name, BigDecimal item_cost) {
+    public Product(Integer id_item, String item_name, BigDecimal item_cost, Integer item_qtd) {
         this.id_item = id_item;
         this.item_name = item_name;
         this.item_cost = item_cost;
+        this.item_qtd = item_qtd;
     }
 
     public Integer getId_item() {
@@ -50,4 +54,7 @@ public class Product {
     public void setItem_cost(BigDecimal item_cost) {
         this.item_cost = item_cost;
     }
+
+    public Integer getItem_quantity() { return item_qtd;}
+    public void setItem_quantity(Integer item_quantity) {this.item_qtd = item_quantity;}
 }

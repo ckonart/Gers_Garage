@@ -1,4 +1,4 @@
-package Gers_Garage.service;
+package com.gersgarage.service;
 
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
-package Gers_Garage.models;
+package com.gersgarage.models;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "role")
 public class Role {
 
     @Id

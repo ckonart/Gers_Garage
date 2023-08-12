@@ -1,7 +1,8 @@
-package Gers_Garage.service;
+package com.gersgarage.service;
 
-import Gers_Garage.models.Vehicle;
-import Gers_Garage.repositories.VehicleRepository;
+import com.gersgarage.models.Product;
+import com.gersgarage.models.Vehicle;
+import com.gersgarage.repositories.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,9 +20,10 @@ public class VehicleService {
         this.vehicleRepository = vehicleRepository;
     }
 
+    public List<Vehicle> findAllVehicles() {return vehicleRepository.findAllVehicles(); }
 
-    /*public List<Vehicle> findVehicleById(Integer vehicleId) {
-        return vehicleRepository.findVehicleById(vehicleId); }*/
+    public List<Vehicle> findVehicleById(Integer vehicleId) {
+        return vehicleRepository.findVehicleById(vehicleId); }
     public List<Vehicle> findVehicleByModel(String model) {
         return vehicleRepository.findVehicleByModel(model); }
 

@@ -1,4 +1,4 @@
-package Gers_Garage.models;
+package com.gersgarage.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

@@ -1,4 +1,4 @@
-package Gers_Garage.constants;
+package com.gersgarage.constants;
 
 public class GarageConstants {
 

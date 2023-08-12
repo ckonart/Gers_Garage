@@ -1,11 +1,12 @@
-package Gers_Garage.enumerates;
+package com.gersgarage.enumerates;
 
 public enum ServiceType {
 
     ANNUAL_SERVICE("Annual Service", 150.00),
     MAJOR_SERVICE("Major Service", 300.00),
     REPAIR("Repair", 250.00),
-    MAJOR_REPAIR("Major Repair", 500.00);
+    MAJOR_REPAIR("Major Repair", 500.00),
+    DETAILING("Major Repair", 130.00);
 
 
     private String type;

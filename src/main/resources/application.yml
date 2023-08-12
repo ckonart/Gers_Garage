@@ -1,12 +1,12 @@
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5432/Gers_Garage
+        url: jdbc:postgresql://localhost:5432/gers-garage
         username: postgres
         password: Caio6021
     jpa:
         show-sql: true
         hibernate:
-            ddl-auto: create
+            ddl-auto: update
         properties:
             hibernate:
             dialect: org.hibernate.dialect.PostgreSQLDialect

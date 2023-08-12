@@ -1,9 +1,8 @@
-package Gers_Garage.models;
+package com.gersgarage.models;
 
-import Gers_Garage.enumerates.BookingStatus;
-import Gers_Garage.enumerates.ServiceType;
+import com.gersgarage.enumerates.BookingStatus;
+import com.gersgarage.enumerates.ServiceType;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

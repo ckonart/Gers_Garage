@@ -1,6 +1,6 @@
-package Gers_Garage.repositories;
+package com.gersgarage.repositories;
 
-import Gers_Garage.models.Role;
+import com.gersgarage.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
